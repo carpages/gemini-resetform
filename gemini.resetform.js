@@ -1,7 +1,7 @@
 /**
  * @fileoverview
 
-A jQuery plugin to reset forms to their default values.
+A Gemini plugin to reset forms to their default values.
 
 ### Notes
 - The plugin uses ``data-reset`` attributes to find default values
@@ -10,12 +10,11 @@ A jQuery plugin to reset forms to their default values.
 - Here's a feature
 
  *
- * @namespace jquery.resetform
+ * @namespace gemini.resetform
  * @copyright Carpages.ca 2014
  * @author Matt Rose <matt@mattrose.ca>
  *
- * @requires jquery
- * @requires jquery.boiler
+ * @requires gemini
  *
  * @example
   <html>
@@ -50,9 +49,9 @@ A jQuery plugin to reset forms to their default values.
   </html>
  *
  * @example
-  $('#js-hook').resetform();
+  G('#js-hook').resetform();
  */
-define(['jquery-loader', 'jquery.boiler'], function($){
+define(['gemini'], function($){
 
   $.boiler('resetform', {
 
@@ -75,7 +74,7 @@ define(['jquery-loader', 'jquery.boiler'], function($){
      * Reset the form to its defaults
      *
      * @method
-     * @name jquery.resetform#reset
+     * @name gemini.resetform#reset
     **/
     reset: function(){
       var plugin = this;
@@ -94,7 +93,7 @@ define(['jquery-loader', 'jquery.boiler'], function($){
      * Reset all of the select dropdowns
      *
      * @method
-     * @name jquery.resetform#seletReset
+     * @name gemini.resetform#seletReset
     **/
     selectReset: function(){
       var plugin = this;
@@ -118,7 +117,7 @@ define(['jquery-loader', 'jquery.boiler'], function($){
      * Reset all of the checkboxes
      *
      * @method
-     * @name jquery.resetform#checkboxReset
+     * @name gemini.resetform#checkboxReset
     **/
     checkboxReset: function(){
       var plugin = this;
@@ -136,7 +135,7 @@ define(['jquery-loader', 'jquery.boiler'], function($){
      * Reset all of the radio buttons
      *
      * @method
-     * @name jquery.resetform#radioReset
+     * @name gemini.resetform#radioReset
     **/
     radioReset: function(){
       var plugin = this;
