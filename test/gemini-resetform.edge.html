@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Gemini Geolocation Edge Test</title>
+
+  <style>
+    body {
+      padding: 1em;
+    }
+  </style>
+
+  <script>window.G={D:{_qj:[]}};G.Q=function(k){G.D._qj.push(k)};//0.1.0</script>
+</head>
+<body>
+
+  <form id="js-form" action="#">
+    <select name="make" data-reset="dodge">
+      <option value="dodge" selected>Dodge</option>
+      <option value="ford">Ford</option>
+    </select>
+
+    <label>
+      <input type="radio" value="auto" name="transmission" data-reset="this" checked>
+      Automatic
+    </label>
+    <label>
+      <input type="radio" value="manual" name="transmission">
+      Manual
+    </label>
+
+    <label>
+      <input type="checkbox" value="bluetooth" name="features" data-reset="this" checked>
+      Bluetooth
+    </label>
+    <label>
+      <input type="checkbox" value="air" name="features">
+      Air-conditioning
+    </label>
+
+    <button data-reset="trigger">
+      Reset
+    </button>
+  </form>
+
+  <!-- Load JS. -->
+  <script data-main="gemini-resetform.edge" src="../bower_components/requirejs/require.js"></script>
+</body>
+</html>
