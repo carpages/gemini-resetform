@@ -58,7 +58,7 @@ A Gemini plugin to reset forms to their default values.
   } else if ( typeof exports === 'object' ) {
     // Node/CommonJS
     module.exports = factory(
-      require( 'gemini' )
+      require( 'gemini-loader' )
     );
   } else {
     // Browser globals
