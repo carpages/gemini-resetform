@@ -102,7 +102,7 @@ define(['gemini'], function($){
 
       $select.each(function(){
         var $this = $(this),
-            $toSelect = $this.find('[value=' + $this.data('reset') + ']');
+            $toSelect = $this.find('[value="' + $this.data('reset') + '"]');
 
         if ($toSelect.length <= 0) $toSelect = $this.find('option:first');
 
