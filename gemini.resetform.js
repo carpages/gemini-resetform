@@ -51,20 +51,18 @@ A Gemini plugin to reset forms to their default values.
  * @example
   G('#js-hook').resetform();
  */
-define(['gemini'], function($){
-
+define(['gemini'], function($) {
   $.boiler('resetform', {
-
-    init: function(){
+    init: function() {
       var plugin = this;
 
       //Bind reset form
-      plugin.$el.bind('reset', function(){
+      plugin.$el.bind('reset', function() {
         plugin.reset();
       });
 
       //Bind click event
-      plugin.$el.find('[data-reset="trigger"]').click(function(e){
+      plugin.$el.find('[data-reset="trigger"]').click(function(e) {
         e.preventDefault();
         plugin.$el.trigger('reset');
       });
@@ -75,8 +73,8 @@ define(['gemini'], function($){
      *
      * @method
      * @name gemini.resetform#reset
-    **/
-    reset: function(){
+     **/
+    reset: function() {
       var plugin = this;
 
       //Select boxes
@@ -94,15 +92,15 @@ define(['gemini'], function($){
      *
      * @method
      * @name gemini.resetform#seletReset
-    **/
-    selectReset: function(){
+     **/
+    selectReset: function() {
       var plugin = this;
 
       var $select = plugin.$el.find('select[data-reset]');
 
-      $select.each(function(){
+      $select.each(function() {
         var $this = $(this),
-            $toSelect = $this.find('[value="' + $this.data('reset') + '"]');
+          $toSelect = $this.find('[value="' + $this.data('reset') + '"]');
 
         if ($toSelect.length <= 0) $toSelect = $this.find('option:first');
 
@@ -118,17 +116,17 @@ define(['gemini'], function($){
      *
      * @method
      * @name gemini.resetform#checkboxReset
-    **/
-    checkboxReset: function(){
+     **/
+    checkboxReset: function() {
       var plugin = this;
 
       var $checkbox = plugin.$el.find('[type="checkbox"]');
 
       // Uncheck them all
-      $checkbox.prop('checked', false);
+      $checkbox.attr('checked', false);
 
       // Check the default items
-      $checkbox.filter('[data-reset="this"]').prop('checked', true);
+      $checkbox.filter('[data-reset="this"]').attr('checked', true);
     },
 
     /**
@@ -136,22 +134,21 @@ define(['gemini'], function($){
      *
      * @method
      * @name gemini.resetform#radioReset
-    **/
-    radioReset: function(){
+     **/
+    radioReset: function() {
       var plugin = this;
 
       var $radio = plugin.$el.find('[type="radio"]');
 
       // Uncheck them all
-      $radio.prop('checked', false);
+      $radio.attr('checked', false);
 
       // Check the default items
-      $radio.filter('[data-reset="this"]').prop('checked', true);
+      $radio.filter('[data-reset="this"]').attr('checked', true);
     }
   });
 
   // Return the jquery object
   // This way you don't need to require both jquery and the plugin
   return $;
-
 });
