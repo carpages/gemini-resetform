@@ -107,9 +107,9 @@ define(['gemini'], function($){
         if ($toSelect.length <= 0) $toSelect = $this.find('option:first');
 
         //Deselect
-        $this.find('option:selected').prop('selected', false);
+        $this.find('option:selected').attr('selected', false);
         //Select
-        $toSelect.prop('selected', true);
+        $toSelect.attr('selected', true);
       });
     },
 
