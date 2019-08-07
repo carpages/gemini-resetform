@@ -57,16 +57,13 @@ A Gemini plugin to reset forms to their default values.
     define([ 'gemini' ], factory );
   } else if ( typeof exports === 'object' ) {
     // Node/CommonJS
-    module.exports = factory(
-      require( 'gemini-loader' )
-    );
+    module.exports = factory( require( 'gemini-loader' ));
   } else {
     // Browser globals
     factory( G );
   }
-}( function( $ ) {
+})( function( $ ) {
   $.boiler( 'resetform', {
-
     init: function() {
       var plugin = this;
 
@@ -87,7 +84,7 @@ A Gemini plugin to reset forms to their default values.
      *
      * @method
      * @name gemini.resetform#reset
-    **/
+     **/
     reset: function() {
       var plugin = this;
 
@@ -106,7 +103,7 @@ A Gemini plugin to reset forms to their default values.
      *
      * @method
      * @name gemini.resetform#seletReset
-    **/
+     **/
     selectReset: function() {
       var plugin = this;
 
@@ -130,7 +127,7 @@ A Gemini plugin to reset forms to their default values.
      *
      * @method
      * @name gemini.resetform#checkboxReset
-    **/
+     **/
     checkboxReset: function() {
       var plugin = this;
 
@@ -148,7 +145,7 @@ A Gemini plugin to reset forms to their default values.
      *
      * @method
      * @name gemini.resetform#radioReset
-    **/
+     **/
     radioReset: function() {
       var plugin = this;
 
@@ -165,4 +162,4 @@ A Gemini plugin to reset forms to their default values.
   // Return the jquery object
   // This way you don't need to require both jquery and the plugin
   return $;
-}));
+});
